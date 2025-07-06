@@ -7,47 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #7b2cbf;
-            --primary-light: #9d4edd;
-            --secondary: #ff9e00;
-            --dark: #10002b;
-            --darker: #03001c;
+            --primary: #5a189a;
+            --primary-light: #7b2cbf;
+            --secondary: #f77f00;
+            --dark: #212529;
+            --darker: #161a1d;
             --light: #f8f9fa;
             --lighter: #ffffff;
             --text: #495057;
-            --text-light: #adb5bd;
+            --text-light: #6c757d;
             --bg: #f8f9fa;
-            --card-bg: rgba(255, 255, 255, 0.8);
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --card-bg: #ffffff;
+            --card-border: #e9ecef;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease-out;
         }
 
         [data-theme="dark"] {
-            --primary: #c77dff;
-            --primary-light: #e0aaff;
+            --primary: #9d4edd;
+            --primary-light: #c77dff;
             --secondary: #ff9e00;
             --dark: #f8f9fa;
             --darker: #e9ecef;
-            --light: #10002b;
-            --lighter: #240046;
+            --light: #161a1d;
+            --lighter: #212529;
             --text: #e9ecef;
             --text-light: #adb5bd;
-            --bg: #10002b;
-            --card-bg: rgba(36, 0, 70, 0.6);
-            --glass-bg: rgba(36, 0, 70, 0.3);
-            --glass-border: rgba(123, 44, 191, 0.2);
-            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            --bg: #161a1d;
+            --card-bg: #212529;
+            --card-border: #343a40;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -59,13 +52,9 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--text);
             background-color: var(--bg);
-            background-image: 
-                radial-gradient(at 80% 0%, var(--primary-light) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, var(--primary) 0px, transparent 50%);
-            min-height: 100vh;
             transition: var(--transition);
             overflow-x: hidden;
         }
@@ -73,28 +62,25 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
         }
 
         header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             position: relative;
-            animation: fadeIn 0.8s ease-out;
         }
 
         .theme-toggle {
             position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
             color: var(--primary);
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,35 +104,31 @@
         }
 
         .avatar {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(123, 44, 191, 0.3);
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(90, 24, 154, 0.2);
             transition: var(--transition);
         }
 
-        .avatar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(123, 44, 191, 0.4);
-        }
-
         h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 0.5rem;
         }
 
         h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 600;
             color: var(--dark);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
         }
@@ -154,245 +136,208 @@
         h2::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
             width: 50px;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
 
-        h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            max-width: 700px;
-            line-height: 1.8;
-        }
-
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 16px;
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             box-shadow: var(--shadow);
-            border: 1px solid var(--glass-border);
+            border: 1px solid var(--card-border);
             transition: var(--transition);
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-out;
         }
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .tech-item {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
+            border-radius: 8px;
+            padding: 1.2rem 0.8rem;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid var(--glass-border);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
+            border: 1px solid var(--card-border);
         }
 
         .tech-item:hover {
-            transform: translateY(-8px) scale(1.03);
-            background: var(--primary-light);
-            color: white;
-        }
-
-        .tech-item:hover p {
-            color: white;
+            transform: translateY(-4px);
+            border-color: var(--primary);
         }
 
         .tech-item img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            width: 40px;
+            height: 40px;
+            margin-bottom: 0.8rem;
         }
 
+        .tech-item p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        /* Improved Projects Section */
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
             margin: 2rem 0;
         }
 
         .project-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid var(--glass-border);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-image {
-            height: 180px;
+            height: 160px;
             width: 100%;
             object-fit: cover;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--card-border);
         }
 
         .project-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
 
+        .project-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
         .project-tech {
             display: flex;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             flex-wrap: wrap;
         }
 
         .tech-badge {
             background: var(--primary-light);
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 16px;
+            font-size: 0.75rem;
             font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .project-link:hover {
+            color: var(--secondary);
         }
 
         .github-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .stat-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
+            border: 1px solid var(--card-border);
         }
 
         .contact-badges {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 3rem 0;
+            gap: 1rem;
+            margin: 2rem 0;
         }
 
         .badge {
-            padding: 1rem 2rem;
-            border-radius: 12px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
             color: white;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.7rem;
             transition: var(--transition);
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            box-shadow: var(--shadow);
-        }
-
-        .badge:hover {
-            transform: translateY(-5px) scale(1.05);
             background: var(--primary);
         }
 
-        .badge i {
-            font-size: 1.2rem;
+        .badge:hover {
+            transform: translateY(-3px);
+            background: var(--primary-light);
         }
 
         footer {
             text-align: center;
-            margin-top: 5rem;
+            margin-top: 4rem;
             padding: 2rem;
             color: var(--text-light);
             font-size: 0.9rem;
         }
 
-        /* Animations */
-        .animated {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                padding: 1.5rem;
+                padding: 1.5rem 1rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
-            h2 {
-                font-size: 1.5rem;
+            .section {
+                padding: 1.5rem;
             }
             
             .tech-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
             }
             
             .projects-container {
                 grid-template-columns: 1fr;
-            }
-            
-            .github-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-badges {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .badge {
-                width: 100%;
-                justify-content: center;
             }
         }
     </style>
@@ -405,131 +350,127 @@
 
         <header>
             <div class="profile-container">
-                <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID" alt="Salma Razzaq" class="avatar">
+                
                 <div>
                     <h1>Salma Razzaq</h1>
-                    <p> Python/Django Developer </p>
+                    <p> Python/Django Developer</p>
                 </div>
             </div>
         </header>
 
-        <section class="glass-card animated">
-            <h2>🚀 Professional Profile</h2>
-            <p>I'm a passionate backend developer with extensive experience in building scalable, high-performance web applications using Python and Django. My expertise lies  optimizing database performance, and creating seamless API integrations.</p>
+        <section class="section">
+            <h2>Professional Profile</h2>
+            <p>I specialize in building robust, scalable backend systems with Python and Django. With expertise in API development, database optimization,  I deliver high-performance solutions tailored to business needs.</p>
             
             <div class="tech-grid">
-                <div class="tech-item animated delay-1">
-                    <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python">
+                <div class="tech-item">
+                    <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
                     <p>Python</p>
                 </div>
-                <div class="tech-item animated delay-1">
-                    <img src="https://img.icons8.com/color/96/000000/django.png" alt="Django">
+                <div class="tech-item">
+                    <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django">
                     <p>Django</p>
                 </div>
-                <div class="tech-item animated delay-2">
-                    <img src="https://img.icons8.com/ios-filled/96/26e07f/django-rest-api.png" alt="Django REST">
+                <div class="tech-item">
+                    <img src="https://img.icons8.com/ios-filled/48/26e07f/django-rest-api.png" alt="Django REST">
                     <p>Django REST</p>
                 </div>
-                <div class="tech-item animated delay-2">
-                    <img src="https://img.icons8.com/color/96/000000/postgreesql.png" alt="PostgreSQL">
+                <div class="tech-item">
+                    <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="PostgreSQL">
                     <p>PostgreSQL</p>
                 </div>
-                <div class="tech-item animated delay-3">
-                    <img src="https://img.icons8.com/color/96/000000/docker.png" alt="Docker">
+                <div class="tech-item">
+                    <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker">
                     <p>Docker</p>
                 </div>
             </div>
         </section>
 
-        <section class="glass-card animated delay-1">
-            <h2>🌟 Featured Projects</h2>
+        <section class="section">
+            <h2>Featured Projects</h2>
             
             <div class="projects-container">
-                <div class="project-card animated delay-1">
-                    <img src="https://via.placeholder.com/600x400/7b2cbf/ffffff?text=E-commerce+Platform" class="project-image" alt="E-commerce Platform">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="project-image" alt="E-commerce Platform">
                     <div class="project-content">
                         <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">Full-featured online store with Shopify integration, inventory management, and payment processing.</p>
                         <div class="project-tech">
                             <span class="tech-badge">Django</span>
-                            <span class="tech-badge">Shopify API</span>
                             <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">REST API</span>
                         </div>
-                        <p>Custom e-commerce solution with Shopify integration, real-time inventory management, and payment processing.</p>
-                        <a href="https://github.com/salmarazzaq257/shopify-integration" class="badge" style="margin-top: 1rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View Project
+                        <a href="https://github.com/salmarazzaq257/shopify-integration" class="project-link">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 
-                <div class="project-card animated delay-2">
-                    <img src="https://via.placeholder.com/600x400/9d4edd/ffffff?text=Store+Locator" class="project-image" alt="Store Locator">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="project-image" alt="Store Locator">
                     <div class="project-content">
-                        <h3 class="project-title">Store Locator</h3>
+                        <h3 class="project-title">Store Locator System</h3>
+                        <p class="project-description">Interactive location finder with geospatial search and real-time inventory checking.</p>
                         <div class="project-tech">
-                            <span class="tech-badge">Google Maps API</span>
-                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Google Maps</span>
                             <span class="tech-badge">Geolocation</span>
+                            <span class="tech-badge">JavaScript</span>
                         </div>
-                        <p>Interactive store locator with geospatial search, route planning, and real-time availability checking.</p>
-                        <a href="https://github.com/salmarazzaq257/store-locator" class="badge" style="margin-top: 1rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View Project
+                        <a href="https://github.com/salmarazzaq257/store-locator" class="project-link">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 
-                <div class="project-card animated delay-3">
-                    <img src="https://via.placeholder.com/600x400/ff9e00/ffffff?text=Enterprise+CMS" class="project-image" alt="Enterprise CMS">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="project-image" alt="Enterprise CMS">
                     <div class="project-content">
                         <h3 class="project-title">Enterprise CMS</h3>
+                        <p class="project-description">Custom content management system with role-based access control and headless architecture.</p>
                         <div class="project-tech">
                             <span class="tech-badge">Django</span>
                             <span class="tech-badge">Headless</span>
                             <span class="tech-badge">RBAC</span>
                         </div>
-                        <p>Custom content management system with role-based access control and headless architecture.</p>
-                        <a href="https://github.com/salmarazzaq257/enterprise-cms" class="badge" style="margin-top: 1rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View Project
+                        <a href="https://github.com/salmarazzaq257/enterprise-cms" class="project-link">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="glass-card animated delay-2">
-            <h2>📊 GitHub Analytics</h2>
+        <section class="section">
+            <h2>GitHub Analytics</h2>
             <div class="github-stats">
-                <div class="stat-card animated delay-1">
-                    <img src="https://github-readme-stats.vercel.app/api?username=salmarazzaq257&show_icons=true&count_private=true&theme=merko&hide_border=true&include_all_commits=true&bg_color=00000000&text_color=var(--text)" alt="GitHub Stats" style="width: 100%;">
+                <div class="stat-card">
+                    <img src="https://github-readme-stats.vercel.app/api?username=salmarazzaq257&show_icons=true&count_private=true&theme=default&hide_border=true&include_all_commits=true&bg_color=00000000&text_color=var(--text)&title_color=var(--primary)" alt="GitHub Stats" style="width: 100%;">
                 </div>
-                <div class="stat-card animated delay-2">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=salmarazzaq257&layout=compact&theme=merko&hide_border=true&bg_color=00000000&text_color=var(--text)" alt="Top Languages" style="width: 100%;">
+                <div class="stat-card">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=salmarazzaq257&layout=compact&theme=default&hide_border=true&bg_color=00000000&text_color=var(--text)&title_color=var(--primary)" alt="Top Languages" style="width: 100%;">
                 </div>
             </div>
         </section>
 
-        <section class="glass-card animated delay-3">
-            <h2>📬 Let's Connect</h2>
-            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+        <section class="section">
+            <h2>Contact</h2>
+            <p>Let's discuss how I can contribute to your next project.</p>
             
             <div class="contact-badges">
-                <a href="mailto:salmarazzaq257@gmail.com" class="badge animated delay-1">
-                    <i class="fas fa-envelope"></i> Email Me
+                <a href="mailto:salmarazzaq257@gmail.com" class="badge">
+                    <i class="fas fa-envelope"></i> Email
                 </a>
-                <a href="https://www.linkedin.com/in/salma-razzaq/" class="badge animated delay-2">
+                <a href="https://www.linkedin.com/in/salma-razzaq/" class="badge">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
-                <a href="https://github.com/salmarazzaq257" class="badge animated delay-3">
+                <a href="https://github.com/salmarazzaq257" class="badge">
                     <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="#" class="badge animated delay-4">
-                    <i class="fab fa-twitter"></i> Twitter
                 </a>
             </div>
         </section>
 
-        <footer class="animated delay-4">
+        <footer>
             <p>© 2023 Salma Razzaq. All rights reserved.</p>
-            <p>Built with ❤️ and Python</p>
         </footer>
     </div>
 
@@ -562,32 +503,32 @@
             }
         });
 
-        // Animation on scroll
+        // Simple animation on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.animated');
+            const sections = document.querySelectorAll('.section');
             
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
                 
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
+                if (sectionPosition < screenPosition) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
                 }
             });
         };
 
         // Initialize animations
         window.addEventListener('load', () => {
-            const animatedElements = document.querySelectorAll('.animated');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(12px)';
             });
             
             setTimeout(() => {
                 animateOnScroll();
-            }, 500);
+            }, 300);
         });
 
         window.addEventListener('scroll', animateOnScroll);
