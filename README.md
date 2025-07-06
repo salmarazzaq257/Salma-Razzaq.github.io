@@ -9,8 +9,6 @@
 ## 🙋‍♀️ About Me
 
 - 🔧 Backend Developer with experience in **Python, Django, and REST APIs**
-- 🌐 I have done quite a lot of projects of **Machine learning and Deep Learning.**
-- 🌱 I’m currently learning **Data Structures and Algorithms.**
 - 🌱 I’m currently working on  **Real Time projects.**
 - 🧠 Constantly exploring **new backend tools, Django optimizations**, and scalable architectures
 - 💡 Projects include **Shopify integration, CMS backend**, and **Storelocation_Google api integration**
