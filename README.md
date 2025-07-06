@@ -18,26 +18,51 @@
 
 ## 🛠️ Tech Stack
 
-<table>
-<tr>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/python.png"/> <br/>Python</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/django.png"/> <br/>Django</td>
- </tr>
-<tr>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/html-5.png"/> <br/>HTML</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/css3.png"/> <br/>CSS</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/javascript.png"/> <br/>JavaScript</td>
-</tr>
-<tr>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/shopify.png"/> <br/>Shopify</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/mysql-logo.png"/> <br/>MySQL</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/postgreesql.png"/> <br/>PostgreSQL</td>
-</tr>
-<tr>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/git.png"/> <br/>Git</td>
- <td align="center"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"/> <br/>Postman</td>
- <td align="center"><img src="https://img.icons8.com/color/48/000000/swagger.png"/> <br/>Swagger</td>
-</tr>
+## 🛠️ Tech Stack
+
+<table align="center">
+  <tr>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/python.png"/><br><b>Python</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/django.png"/><br><b>Django</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/html-5.png"/><br><b>HTML5</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/css3.png"/><br><b>CSS3</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/javascript.png"/><br><b>JavaScript</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/shopify.png"/><br><b>Shopify</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/postgreesql.png"/><br><b>PostgreSQL</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/mysql-logo.png"/><br><b>MySQL</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/git.png"/><br><b>Git</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"/><br><b>Postman</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/color/48/000000/swagger.png"/><br><b>Swagger</b>
+    </td>
+    <td align="center" width="130">
+      <img src="https://img.icons8.com/fluency/48/000000/jupyter.png"/><br><b>Jupyter</b>
+    </td>
+  </tr>
 </table>
 
 ---
