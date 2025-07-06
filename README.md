@@ -18,8 +18,6 @@
 
 ## 🛠️ Tech Stack
 
-## 🛠️ Tech Stack
-
 <table align="center">
   <tr>
     <td align="center" width="130">
@@ -60,7 +58,7 @@
       <img src="https://img.icons8.com/color/48/000000/swagger.png"/><br><b>Swagger</b>
     </td>
     <td align="center" width="130">
-      <img src="https://img.icons8.com/fluency/48/000000/jupyter.png"/><br><b>Jupyter</b>
+      <img src="https://img.icons8.com/fluency/48/000000/jupyter.png"/><br><b>CoLab</b>
     </td>
   </tr>
 </table>
